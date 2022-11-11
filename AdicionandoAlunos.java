@@ -25,8 +25,8 @@ public class AdicionandoAlunos {
         // alunos.add("Maria");   
         // alunos.add("Matheus");   
         // alunos.add("Natália");
-        // alunos.add("Matheus");
-        // alunos.add("Natália");  
+        // alunos.add("Orlando");
+        // alunos.add("Aurélio");  
         // alunos.add("Ana");
         // alunos.add("Alana");
         // alunos.add("Aline");   
@@ -38,38 +38,35 @@ public class AdicionandoAlunos {
         // alunos.add("Elvis");   
         // alunos.add("Fernanda");   
         // alunos.add("Fernando");   
-        // alunos.add("Gabriela"); 
+        // alunos.add("Gabriela");
+        // alunos.add("Hugo"); 
+
 
         String nomeAluno;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Programa de cadastro de alunos");
-        while (alunos.size() < 24) {
+        while (alunos.size() <= 24) {
             System.out.println("Digite o nome do aluno " + (alunos.size()+1) + ": ");
             nomeAluno = scanner.next();
             alunos.add(nomeAluno);
         } 
 
-        System.out.println("Lista de alunos: ");
-        Collections.sort(alunos); 
+        System.out.println("Lista dos 25 alunos cadastrados até agora: ");
         for (String i : alunos) {
             System.out.println(i);
         }
 
-        while (alunos.size() < 29) {
-            System.out.println("Digite o nome do aluno " + (alunos.size()+1) + ": ");
+        while (alunos.size() <= 29) {
+            System.out.println("Foram cadastrados " + (alunos.size()) + " alunos até o momento. Para acrescentar mais alunos, digite o nome do aluno " + (alunos.size()+1) + ": ");
             nomeAluno = scanner.next();
             alunos.add(nomeAluno);
         } 
 
-        System.out.println("Lista de alunos: ");
+        System.out.println("Lista ordenada dos " + (alunos.size()) + " alunos cadastrados: ");
         Collections.sort(alunos); 
         for (String i : alunos) {
             System.out.println(i);
-        }
-
-        for (int i = 0; i < alunos.size(); i++) {
-            System.out.println(alunos.get(i));
         }
         
     }
